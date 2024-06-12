@@ -8,8 +8,6 @@
 import SwiftUI
 
 struct ModePickerView: View {
-  @EnvironmentObject private var detector: MotionDetector
-  
   var body: some View {
     NavigationStack {
       List {
@@ -59,5 +57,4 @@ struct ModePickerView: View {
 
 #Preview {
   ModePickerView()
-    .environmentObject(MotionDetector(updateInterval: 0.05))
 }

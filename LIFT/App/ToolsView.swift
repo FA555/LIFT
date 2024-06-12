@@ -8,8 +8,6 @@
 import SwiftUI
 
 struct ToolsView: View {
-  @StateObject private var detector = MotionDetector(updateInterval: 0.05)
-  
   var body: some View {
     NavigationSplitView {
       List {
@@ -104,7 +102,6 @@ struct ToolsView: View {
       Text("Select a tool.")
         .foregroundStyle(.secondary)
     }
-    .environmentObject(detector)
   }
 }
 

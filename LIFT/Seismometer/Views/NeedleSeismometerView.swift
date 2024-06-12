@@ -8,12 +8,12 @@
 import SwiftUI
 
 struct NeedleSeismometerView: View {
-  @EnvironmentObject var motionDetector: MotionDetector
+  @ObservedObject private var detector = MotionDetector(updateInterval: 0.05)
   
   let needleAnchor = UnitPoint(x: 0.5, y: 1)
   let amplification = 2.0
   var rotationAngle: Angle {
-    Angle(radians: -motionDetector.zAcceleration * amplification)
+    Angle(radians: -detector.zAcceleration * amplification)
   }
   
   var body: some View {
@@ -45,7 +45,7 @@ struct NeedleSeismometerView: View {
       Spacer()
         .frame(height: 50)
       
-      Text("\(motionDetector.zAcceleration.describeAsFixedLengthString())")
+      Text("\(detector.zAcceleration.describeAsFixedLengthString())")
         .font(.system(.body, design: .monospaced))
         .fontWeight(.semibold)
       
@@ -56,19 +56,14 @@ struct NeedleSeismometerView: View {
         .padding()
     }
     .onAppear {
-      motionDetector.start()
+      detector.start()
     }
     .onDisappear {
-      motionDetector.stop()
+      detector.stop()
     }
   }
 }
 
-struct NeedleSeismometer_Previews: PreviewProvider {
-  @StateObject static private var detector = MotionDetector(updateInterval: 0.01).started()
-  
-  static var previews: some View {
-    NeedleSeismometerView()
-      .environmentObject(detector)
-  }
+#Preview {
+  NeedleSeismometerView()
 }
