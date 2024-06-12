@@ -1,0 +1,145 @@
+{
+  "sourceLanguage" : "en",
+  "strings" : {
+    "%@" : {
+
+    },
+    "0.1.0" : {
+      "localizations" : {
+        "zh" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : ""
+          }
+        }
+      }
+    },
+    "810893" : {
+
+    },
+    "1919810" : {
+
+    },
+    "A graph that shows the device’s vibration." : {
+
+    },
+    "A needle that responds to the device’s vibration." : {
+
+    },
+    "A tool for scanning and generating QR codes." : {
+
+    },
+    "A tool that helps you plan your DDLs." : {
+
+    },
+    "A tool that measures the device’s vibrations." : {
+
+    },
+    "A tool that organises all your friends' birthdays." : {
+
+    },
+    "About" : {
+
+    },
+    "Add Item" : {
+
+    },
+    "Author" : {
+
+    },
+    "Birthday Reminder" : {
+
+    },
+    "DDL Planner" : {
+
+    },
+    "fa_555" : {
+      "localizations" : {
+        "zh" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : ""
+          }
+        }
+      }
+    },
+    "GitHub" : {
+      "localizations" : {
+        "zh" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : ""
+          }
+        }
+      }
+    },
+    "Graph" : {
+
+    },
+    "Hello, World!" : {
+
+    },
+    "Item at %@" : {
+
+    },
+    "LIFT" : {
+      "localizations" : {
+        "zh" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : ""
+          }
+        }
+      }
+    },
+    "Lightweight Integrated Featurized Toolbox" : {
+
+    },
+    "Max" : {
+
+    },
+    "Min" : {
+
+    },
+    "Needle" : {
+
+    },
+    "Pitch: %lf" : {
+
+    },
+    "QR Code Tool" : {
+
+    },
+    "Repository" : {
+
+    },
+    "Roll: %lf" : {
+
+    },
+    "Seismometer" : {
+
+    },
+    "Select a tool." : {
+
+    },
+    "Select an item" : {
+
+    },
+    "Sensitivity" : {
+
+    },
+    "Set the device on a flat surface to record vibrations." : {
+
+    },
+    "Toolbox" : {
+
+    },
+    "Version" : {
+
+    },
+    "Z Acceleration: %lf" : {
+
+    }
+  },
+  "version" : "1.0"
+}
