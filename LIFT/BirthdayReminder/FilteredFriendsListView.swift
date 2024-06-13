@@ -8,11 +8,17 @@
 import SwiftUI
 
 struct FilteredFriendsListView: View {
-    var body: some View {
-        Text(/*@START_MENU_TOKEN@*/"Hello, World!"/*@END_MENU_TOKEN@*/)
+  @State private var searchText = ""
+  
+  var body: some View {
+    NavigationStack {
+      FriendsListView(nameFilter: searchText)
+        .searchable(text: $searchText)
     }
+  }
 }
 
 #Preview {
-    FilteredFriendsListView()
+  FilteredFriendsListView()
+    .modelContainer(SampleData.shared.container)
 }

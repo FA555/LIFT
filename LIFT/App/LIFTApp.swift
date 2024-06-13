@@ -13,6 +13,7 @@ struct LIFTApp: App {
   var sharedModelContainer: ModelContainer = {
     let schema = Schema([
 //      TestItem.self,
+      Friend.self,
     ])
     let modelConfiguration = ModelConfiguration(schema: schema, isStoredInMemoryOnly: false)
     

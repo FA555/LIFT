@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		E186942E2C1AA7360085EBEC /* EFQRCode in Frameworks */ = {isa = PBXBuildFile; productRef = E186942D2C1AA7360085EBEC /* EFQRCode */; };
 		E19FF4C42C19D7AD00BA4D9D /* MotionDetector.swift in Sources */ = {isa = PBXBuildFile; fileRef = E19FF4C32C19D7AD00BA4D9D /* MotionDetector.swift */; };
 		E19FF4C72C19DA0300BA4D9D /* GaugeBackgroundView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E19FF4C62C19DA0300BA4D9D /* GaugeBackgroundView.swift */; };
 		E19FF4CA2C19DBFF00BA4D9D /* NeedleSeismometerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E19FF4C92C19DBFF00BA4D9D /* NeedleSeismometerView.swift */; };
@@ -14,6 +15,11 @@
 		E19FF4CD2C19E86C00BA4D9D /* TestView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E1A1DCAA2C1944D000F77968 /* TestView.swift */; };
 		E19FF4D22C19F8A900BA4D9D /* LineGraphView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E19FF4D12C19F8A900BA4D9D /* LineGraphView.swift */; };
 		E19FF4D52C19F95E00BA4D9D /* GraphSeismometerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E19FF4D42C19F95E00BA4D9D /* GraphSeismometerView.swift */; };
+		E19FF4D92C1A1EAD00BA4D9D /* Friend.swift in Sources */ = {isa = PBXBuildFile; fileRef = E19FF4D82C1A1EAD00BA4D9D /* Friend.swift */; };
+		E19FF4DE2C1A1F7100BA4D9D /* FriendsListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E19FF4DD2C1A1F7100BA4D9D /* FriendsListView.swift */; };
+		E19FF4E42C1A22B900BA4D9D /* SampleData.swift in Sources */ = {isa = PBXBuildFile; fileRef = E19FF4E32C1A22B900BA4D9D /* SampleData.swift */; };
+		E19FF4E72C1A2A6900BA4D9D /* FriendDetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E19FF4E62C1A2A6900BA4D9D /* FriendDetailView.swift */; };
+		E19FF4EB2C1A2FCC00BA4D9D /* FilteredFriendsListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E19FF4EA2C1A2FCC00BA4D9D /* FilteredFriendsListView.swift */; };
 		E1A1DCA92C1944D000F77968 /* LIFTApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = E1A1DCA82C1944D000F77968 /* LIFTApp.swift */; };
 		E1A1DCAF2C1944D200F77968 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E1A1DCAE2C1944D200F77968 /* Assets.xcassets */; };
 		E1A1DCB22C1944D200F77968 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E1A1DCB12C1944D200F77968 /* Preview Assets.xcassets */; };
@@ -21,24 +27,9 @@
 		E1A1DCBD2C19B5FB00F77968 /* AboutView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E1A1DCBC2C19B5FB00F77968 /* AboutView.swift */; };
 		E1A1DCC22C19BF9B00F77968 /* ToolsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E1A1DCC12C19BF9B00F77968 /* ToolsView.swift */; };
 		E1A1DCC42C19C00A00F77968 /* Localizable.xcstrings in Resources */ = {isa = PBXBuildFile; fileRef = E1A1DCC32C19C00A00F77968 /* Localizable.xcstrings */; };
-		E1A1DCCC2C19C81800F77968 /* LIFTWatchApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = E1A1DCCB2C19C81800F77968 /* LIFTWatchApp.swift */; };
-		E1A1DCD32C19C81A00F77968 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E1A1DCD22C19C81A00F77968 /* Preview Assets.xcassets */; };
-		E1A1DCD62C19C81A00F77968 /* LIFTWatch Watch App.app in Embed Watch Content */ = {isa = PBXBuildFile; fileRef = E1A1DCC92C19C81800F77968 /* LIFTWatch Watch App.app */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
-		E1A1DCDD2C19C86F00F77968 /* Localizable.xcstrings in Resources */ = {isa = PBXBuildFile; fileRef = E1A1DCC32C19C00A00F77968 /* Localizable.xcstrings */; };
-		E1A1DCE32C19C88A00F77968 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E1A1DCAE2C1944D200F77968 /* Assets.xcassets */; };
 		E1A1DCE82C19CE6500F77968 /* ModePickerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E1A1DCE72C19CE6500F77968 /* ModePickerView.swift */; };
 		E1A1DCEB2C19CEDC00F77968 /* DoubleExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = E1A1DCEA2C19CEDC00F77968 /* DoubleExtension.swift */; };
 /* End PBXBuildFile section */
-
-/* Begin PBXContainerItemProxy section */
-		E1A1DCD42C19C81A00F77968 /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = E1A1DC9D2C1944D000F77968 /* Project object */;
-			proxyType = 1;
-			remoteGlobalIDString = E1A1DCC82C19C81800F77968;
-			remoteInfo = "LIFTWatch Watch App";
-		};
-/* End PBXContainerItemProxy section */
 
 /* Begin PBXCopyFilesBuildPhase section */
 		E1A1DCDA2C19C81A00F77968 /* Embed Watch Content */ = {
@@ -47,7 +38,6 @@
 			dstPath = "$(CONTENTS_FOLDER_PATH)/Watch";
 			dstSubfolderSpec = 16;
 			files = (
-				E1A1DCD62C19C81A00F77968 /* LIFTWatch Watch App.app in Embed Watch Content */,
 			);
 			name = "Embed Watch Content";
 			runOnlyForDeploymentPostprocessing = 1;
@@ -60,6 +50,11 @@
 		E19FF4C92C19DBFF00BA4D9D /* NeedleSeismometerView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NeedleSeismometerView.swift; sourceTree = "<group>"; };
 		E19FF4D12C19F8A900BA4D9D /* LineGraphView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LineGraphView.swift; sourceTree = "<group>"; };
 		E19FF4D42C19F95E00BA4D9D /* GraphSeismometerView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GraphSeismometerView.swift; sourceTree = "<group>"; };
+		E19FF4D82C1A1EAD00BA4D9D /* Friend.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Friend.swift; sourceTree = "<group>"; };
+		E19FF4DD2C1A1F7100BA4D9D /* FriendsListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FriendsListView.swift; sourceTree = "<group>"; };
+		E19FF4E32C1A22B900BA4D9D /* SampleData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SampleData.swift; sourceTree = "<group>"; };
+		E19FF4E62C1A2A6900BA4D9D /* FriendDetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FriendDetailView.swift; sourceTree = "<group>"; };
+		E19FF4EA2C1A2FCC00BA4D9D /* FilteredFriendsListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FilteredFriendsListView.swift; sourceTree = "<group>"; };
 		E1A1DCA52C1944D000F77968 /* LIFT.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = LIFT.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		E1A1DCA82C1944D000F77968 /* LIFTApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LIFTApp.swift; sourceTree = "<group>"; };
 		E1A1DCAA2C1944D000F77968 /* TestView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestView.swift; sourceTree = "<group>"; };
@@ -72,10 +67,6 @@
 		E1A1DCBC2C19B5FB00F77968 /* AboutView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AboutView.swift; sourceTree = "<group>"; };
 		E1A1DCC12C19BF9B00F77968 /* ToolsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ToolsView.swift; sourceTree = "<group>"; };
 		E1A1DCC32C19C00A00F77968 /* Localizable.xcstrings */ = {isa = PBXFileReference; lastKnownFileType = text.json.xcstrings; path = Localizable.xcstrings; sourceTree = "<group>"; };
-		E1A1DCC92C19C81800F77968 /* LIFTWatch Watch App.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "LIFTWatch Watch App.app"; sourceTree = BUILT_PRODUCTS_DIR; };
-		E1A1DCCB2C19C81800F77968 /* LIFTWatchApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LIFTWatchApp.swift; sourceTree = "<group>"; };
-		E1A1DCCF2C19C81A00F77968 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
-		E1A1DCD22C19C81A00F77968 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		E1A1DCE72C19CE6500F77968 /* ModePickerView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ModePickerView.swift; sourceTree = "<group>"; };
 		E1A1DCEA2C19CEDC00F77968 /* DoubleExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DoubleExtension.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -85,19 +76,20 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		E1A1DCC62C19C81800F77968 /* Frameworks */ = {
-			isa = PBXFrameworksBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
+				E186942E2C1AA7360085EBEC /* EFQRCode in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		E186942F2C1AA7540085EBEC /* QRCodeTool */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = QRCodeTool;
+			sourceTree = "<group>";
+		};
 		E19FF4D32C19F8AE00BA4D9D /* Views */ = {
 			isa = PBXGroup;
 			children = (
@@ -110,11 +102,28 @@
 			path = Views;
 			sourceTree = "<group>";
 		};
+		E19FF4D62C1A1D7C00BA4D9D /* DDLPlanner */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = DDLPlanner;
+			sourceTree = "<group>";
+		};
+		E19FF4D72C1A1E7000BA4D9D /* BirthdayReminder */ = {
+			isa = PBXGroup;
+			children = (
+				E19FF4DD2C1A1F7100BA4D9D /* FriendsListView.swift */,
+				E19FF4EA2C1A2FCC00BA4D9D /* FilteredFriendsListView.swift */,
+				E19FF4E62C1A2A6900BA4D9D /* FriendDetailView.swift */,
+				E19FF4D82C1A1EAD00BA4D9D /* Friend.swift */,
+			);
+			path = BirthdayReminder;
+			sourceTree = "<group>";
+		};
 		E1A1DC9C2C1944D000F77968 = {
 			isa = PBXGroup;
 			children = (
 				E1A1DCA72C1944D000F77968 /* LIFT */,
-				E1A1DCCA2C19C81800F77968 /* LIFTWatch Watch App */,
 				E1A1DCA62C1944D000F77968 /* Products */,
 			);
 			sourceTree = "<group>";
@@ -123,7 +132,6 @@
 			isa = PBXGroup;
 			children = (
 				E1A1DCA52C1944D000F77968 /* LIFT.app */,
-				E1A1DCC92C19C81800F77968 /* LIFTWatch Watch App.app */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -131,6 +139,9 @@
 		E1A1DCA72C1944D000F77968 /* LIFT */ = {
 			isa = PBXGroup;
 			children = (
+				E186942F2C1AA7540085EBEC /* QRCodeTool */,
+				E19FF4D72C1A1E7000BA4D9D /* BirthdayReminder */,
+				E19FF4D62C1A1D7C00BA4D9D /* DDLPlanner */,
 				E1A1DCE62C19CD0500F77968 /* App */,
 				E1A1DCE52C19CCFD00F77968 /* Seismometer */,
 				E1A1DCC32C19C00A00F77968 /* Localizable.xcstrings */,
@@ -146,24 +157,6 @@
 			isa = PBXGroup;
 			children = (
 				E1A1DCB12C1944D200F77968 /* Preview Assets.xcassets */,
-			);
-			path = "Preview Content";
-			sourceTree = "<group>";
-		};
-		E1A1DCCA2C19C81800F77968 /* LIFTWatch Watch App */ = {
-			isa = PBXGroup;
-			children = (
-				E1A1DCCB2C19C81800F77968 /* LIFTWatchApp.swift */,
-				E1A1DCCF2C19C81A00F77968 /* Assets.xcassets */,
-				E1A1DCD12C19C81A00F77968 /* Preview Content */,
-			);
-			path = "LIFTWatch Watch App";
-			sourceTree = "<group>";
-		};
-		E1A1DCD12C19C81A00F77968 /* Preview Content */ = {
-			isa = PBXGroup;
-			children = (
-				E1A1DCD22C19C81A00F77968 /* Preview Assets.xcassets */,
 			);
 			path = "Preview Content";
 			sourceTree = "<group>";
@@ -187,6 +180,7 @@
 				E1A1DCAA2C1944D000F77968 /* TestView.swift */,
 				E1A1DCA82C1944D000F77968 /* LIFTApp.swift */,
 				E1A1DCAC2C1944D000F77968 /* TestItem.swift */,
+				E19FF4E32C1A22B900BA4D9D /* SampleData.swift */,
 			);
 			path = App;
 			sourceTree = "<group>";
@@ -206,28 +200,13 @@
 			buildRules = (
 			);
 			dependencies = (
-				E1A1DCD52C19C81A00F77968 /* PBXTargetDependency */,
 			);
 			name = LIFT;
+			packageProductDependencies = (
+				E186942D2C1AA7360085EBEC /* EFQRCode */,
+			);
 			productName = LIFT;
 			productReference = E1A1DCA52C1944D000F77968 /* LIFT.app */;
-			productType = "com.apple.product-type.application";
-		};
-		E1A1DCC82C19C81800F77968 /* LIFTWatch Watch App */ = {
-			isa = PBXNativeTarget;
-			buildConfigurationList = E1A1DCD72C19C81A00F77968 /* Build configuration list for PBXNativeTarget "LIFTWatch Watch App" */;
-			buildPhases = (
-				E1A1DCC52C19C81800F77968 /* Sources */,
-				E1A1DCC62C19C81800F77968 /* Frameworks */,
-				E1A1DCC72C19C81800F77968 /* Resources */,
-			);
-			buildRules = (
-			);
-			dependencies = (
-			);
-			name = "LIFTWatch Watch App";
-			productName = "LIFTWatch Watch App";
-			productReference = E1A1DCC92C19C81800F77968 /* LIFTWatch Watch App.app */;
 			productType = "com.apple.product-type.application";
 		};
 /* End PBXNativeTarget section */
@@ -243,9 +222,6 @@
 					E1A1DCA42C1944D000F77968 = {
 						CreatedOnToolsVersion = 15.2;
 					};
-					E1A1DCC82C19C81800F77968 = {
-						CreatedOnToolsVersion = 15.2;
-					};
 				};
 			};
 			buildConfigurationList = E1A1DCA02C1944D000F77968 /* Build configuration list for PBXProject "LIFT" */;
@@ -254,16 +230,16 @@
 			hasScannedForEncodings = 0;
 			knownRegions = (
 				en,
-				Base,
-				zh,
 			);
 			mainGroup = E1A1DC9C2C1944D000F77968;
+			packageReferences = (
+				E186942C2C1AA7360085EBEC /* XCRemoteSwiftPackageReference "EFQRCode" */,
+			);
 			productRefGroup = E1A1DCA62C1944D000F77968 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
 				E1A1DCA42C1944D000F77968 /* LIFT */,
-				E1A1DCC82C19C81800F77968 /* LIFTWatch Watch App */,
 			);
 		};
 /* End PBXProject section */
@@ -279,16 +255,6 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		E1A1DCC72C19C81800F77968 /* Resources */ = {
-			isa = PBXResourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				E1A1DCD32C19C81A00F77968 /* Preview Assets.xcassets in Resources */,
-				E1A1DCDD2C19C86F00F77968 /* Localizable.xcstrings in Resources */,
-				E1A1DCE32C19C88A00F77968 /* Assets.xcassets in Resources */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
@@ -297,7 +263,9 @@
 			buildActionMask = 2147483647;
 			files = (
 				E19FF4CC2C19E86C00BA4D9D /* TestItem.swift in Sources */,
+				E19FF4D92C1A1EAD00BA4D9D /* Friend.swift in Sources */,
 				E19FF4C72C19DA0300BA4D9D /* GaugeBackgroundView.swift in Sources */,
+				E19FF4E72C1A2A6900BA4D9D /* FriendDetailView.swift in Sources */,
 				E19FF4CD2C19E86C00BA4D9D /* TestView.swift in Sources */,
 				E1A1DCEB2C19CEDC00F77968 /* DoubleExtension.swift in Sources */,
 				E1A1DCC22C19BF9B00F77968 /* ToolsView.swift in Sources */,
@@ -305,30 +273,17 @@
 				E1A1DCBB2C19B28E00F77968 /* ContentView.swift in Sources */,
 				E1A1DCA92C1944D000F77968 /* LIFTApp.swift in Sources */,
 				E1A1DCBD2C19B5FB00F77968 /* AboutView.swift in Sources */,
+				E19FF4E42C1A22B900BA4D9D /* SampleData.swift in Sources */,
 				E1A1DCE82C19CE6500F77968 /* ModePickerView.swift in Sources */,
+				E19FF4EB2C1A2FCC00BA4D9D /* FilteredFriendsListView.swift in Sources */,
 				E19FF4C42C19D7AD00BA4D9D /* MotionDetector.swift in Sources */,
+				E19FF4DE2C1A1F7100BA4D9D /* FriendsListView.swift in Sources */,
 				E19FF4D22C19F8A900BA4D9D /* LineGraphView.swift in Sources */,
 				E19FF4D52C19F95E00BA4D9D /* GraphSeismometerView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		E1A1DCC52C19C81800F77968 /* Sources */ = {
-			isa = PBXSourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				E1A1DCCC2C19C81800F77968 /* LIFTWatchApp.swift in Sources */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
 /* End PBXSourcesBuildPhase section */
-
-/* Begin PBXTargetDependency section */
-		E1A1DCD52C19C81A00F77968 /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			target = E1A1DCC82C19C81800F77968 /* LIFTWatch Watch App */;
-			targetProxy = E1A1DCD42C19C81A00F77968 /* PBXContainerItemProxy */;
-		};
-/* End PBXTargetDependency section */
 
 /* Begin XCBuildConfiguration section */
 		E1A1DCB52C1944D200F77968 /* Debug */ = {
@@ -526,66 +481,6 @@
 			};
 			name = Release;
 		};
-		E1A1DCD82C19C81A00F77968 /* Debug */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
-				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_ASSET_PATHS = "\"LIFTWatch Watch App/Preview Content\"";
-				DEVELOPMENT_TEAM = 545VRSRUHV;
-				ENABLE_PREVIEWS = YES;
-				GENERATE_INFOPLIST_FILE = YES;
-				INFOPLIST_KEY_CFBundleDisplayName = LIFTWatch;
-				INFOPLIST_KEY_UISupportedInterfaceOrientations = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown";
-				INFOPLIST_KEY_WKCompanionAppBundleIdentifier = "fa-555.LIFT";
-				LD_RUNPATH_SEARCH_PATHS = (
-					"$(inherited)",
-					"@executable_path/Frameworks",
-				);
-				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = "fa-555.LIFT.watchkitapp";
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				SDKROOT = watchos;
-				SKIP_INSTALL = YES;
-				SWIFT_EMIT_LOC_STRINGS = YES;
-				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = 4;
-				WATCHOS_DEPLOYMENT_TARGET = 10.2;
-			};
-			name = Debug;
-		};
-		E1A1DCD92C19C81A00F77968 /* Release */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
-				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_ASSET_PATHS = "\"LIFTWatch Watch App/Preview Content\"";
-				DEVELOPMENT_TEAM = 545VRSRUHV;
-				ENABLE_PREVIEWS = YES;
-				GENERATE_INFOPLIST_FILE = YES;
-				INFOPLIST_KEY_CFBundleDisplayName = LIFTWatch;
-				INFOPLIST_KEY_UISupportedInterfaceOrientations = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown";
-				INFOPLIST_KEY_WKCompanionAppBundleIdentifier = "fa-555.LIFT";
-				LD_RUNPATH_SEARCH_PATHS = (
-					"$(inherited)",
-					"@executable_path/Frameworks",
-				);
-				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = "fa-555.LIFT.watchkitapp";
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				SDKROOT = watchos;
-				SKIP_INSTALL = YES;
-				SWIFT_EMIT_LOC_STRINGS = YES;
-				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = 4;
-				WATCHOS_DEPLOYMENT_TARGET = 10.2;
-			};
-			name = Release;
-		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
@@ -607,16 +502,26 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		E1A1DCD72C19C81A00F77968 /* Build configuration list for PBXNativeTarget "LIFTWatch Watch App" */ = {
-			isa = XCConfigurationList;
-			buildConfigurations = (
-				E1A1DCD82C19C81A00F77968 /* Debug */,
-				E1A1DCD92C19C81A00F77968 /* Release */,
-			);
-			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
-		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		E186942C2C1AA7360085EBEC /* XCRemoteSwiftPackageReference "EFQRCode" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/EFPrefix/EFQRCode.git";
+			requirement = {
+				kind = exactVersion;
+				version = 6.2.2;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		E186942D2C1AA7360085EBEC /* EFQRCode */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = E186942C2C1AA7360085EBEC /* XCRemoteSwiftPackageReference "EFQRCode" */;
+			productName = EFQRCode;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = E1A1DC9D2C1944D000F77968 /* Project object */;
 }

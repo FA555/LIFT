@@ -14,7 +14,7 @@ struct ModePickerView: View {
         NavigationLink {
           NeedleSeismometerView()
         } label: {
-          HStack() {
+          HStack {
             Image(systemName: "gauge")
               .foregroundColor(Color.accentColor)
               .padding()
@@ -28,7 +28,8 @@ struct ModePickerView: View {
             }
             .padding(.trailing)
           }
-        }.padding([.top, .bottom])
+        }
+        .padding([.top, .bottom])
         
         NavigationLink {
           GraphSeismometerView()

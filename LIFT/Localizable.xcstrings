@@ -26,19 +26,10 @@
     "A needle that responds to the device’s vibration." : {
 
     },
-    "A tool for scanning and generating QR codes." : {
-
-    },
-    "A tool that helps you plan your DDLs." : {
-
-    },
-    "A tool that measures the device’s vibrations." : {
-
-    },
-    "A tool that organises all your friends' birthdays." : {
-
-    },
     "About" : {
+
+    },
+    "Add Friend" : {
 
     },
     "Add Item" : {
@@ -47,10 +38,22 @@
     "Author" : {
 
     },
+    "Birthday" : {
+
+    },
     "Birthday Reminder" : {
 
     },
+    "Birthdays" : {
+
+    },
+    "Cancel" : {
+
+    },
     "DDL Planner" : {
+
+    },
+    "Done" : {
 
     },
     "fa_555" : {
@@ -62,6 +65,9 @@
           }
         }
       }
+    },
+    "Friend" : {
+
     },
     "GitHub" : {
       "localizations" : {
@@ -76,7 +82,7 @@
     "Graph" : {
 
     },
-    "Hello, World!" : {
+    "Helps you plan your deadlines." : {
 
     },
     "Item at %@" : {
@@ -98,10 +104,25 @@
     "Max" : {
 
     },
+    "Measures the device’s vibrations." : {
+
+    },
     "Min" : {
 
     },
+    "Name" : {
+
+    },
     "Needle" : {
+
+    },
+    "New Friend" : {
+
+    },
+    "No friends" : {
+
+    },
+    "Organises all your friends' birthdays." : {
 
     },
     "Pitch: %lf" : {
@@ -116,10 +137,13 @@
     "Roll: %lf" : {
 
     },
+    "Scans and generates QR codes." : {
+
+    },
     "Seismometer" : {
 
     },
-    "Select a tool." : {
+    "Select a tool to start." : {
 
     },
     "Select an item" : {

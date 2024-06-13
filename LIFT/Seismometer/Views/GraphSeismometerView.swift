@@ -47,7 +47,7 @@ struct GraphSeismometerView: View {
         .font(.headline)
 
       Slider(
-        value: $sensitivity, in: 0...1,
+        value: $sensitivity, in: 0...0.75,
         minimumValueLabel: Text("Min"),
         maximumValueLabel: Text("Max")
       ) {
