@@ -22,9 +22,18 @@ class SampleData {
     Friend.sampleData[0]
   }
   
+  var event: Event {
+    Event.sampleData[2]
+  }
+  
+  var task: Task {
+    Task(text: "Wait for full charge")
+  }
+  
   private init() {
     let schema = Schema([
       Friend.self,
+      Event.self,
     ])
     let configuration = ModelConfiguration(schema: schema)
     
@@ -40,12 +49,17 @@ class SampleData {
   private func insertSampleData() {
     do {
       try context.delete(model: Friend.self)
+      try context.delete(model: Event.self)
     } catch {
-      print("Failed to delete existing friends: \(error)")
+      print("Failed to delete existing Friends or Event: \(error)")
     }
     
     for friend in Friend.sampleData {
       context.insert(friend)
+    }
+    
+    for event in Event.sampleData {
+      context.insert(event)
     }
     
     do {

@@ -14,6 +14,16 @@
 		E18694372C1AC6580085EBEC /* QRCodeScannerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E18694362C1AC6580085EBEC /* QRCodeScannerView.swift */; };
 		E186943B2C1ACA450085EBEC /* QRCodeResultView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E186943A2C1ACA450085EBEC /* QRCodeResultView.swift */; };
 		E186943F2C1AE2780085EBEC /* Task.swift in Sources */ = {isa = PBXBuildFile; fileRef = E186943E2C1AE2780085EBEC /* Task.swift */; };
+		E18694412C1AE64C0085EBEC /* Symbols.swift in Sources */ = {isa = PBXBuildFile; fileRef = E18694402C1AE64C0085EBEC /* Symbols.swift */; };
+		E18694432C1B06BA0085EBEC /* ColorOptions.swift in Sources */ = {isa = PBXBuildFile; fileRef = E18694422C1B06BA0085EBEC /* ColorOptions.swift */; };
+		E18694452C1B09B00085EBEC /* Event.swift in Sources */ = {isa = PBXBuildFile; fileRef = E18694442C1B09B00085EBEC /* Event.swift */; };
+		E18694472C1B15140085EBEC /* EventRowView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E18694462C1B15140085EBEC /* EventRowView.swift */; };
+		E18694492C1B1D1A0085EBEC /* SFSymbolStyling.swift in Sources */ = {isa = PBXBuildFile; fileRef = E18694482C1B1D1A0085EBEC /* SFSymbolStyling.swift */; };
+		E186944B2C1B1FBA0085EBEC /* TaskRowView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E186944A2C1B1FBA0085EBEC /* TaskRowView.swift */; };
+		E186944D2C1B2B8A0085EBEC /* SymbolPickerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E186944C2C1B2B8A0085EBEC /* SymbolPickerView.swift */; };
+		E186944F2C1B349D0085EBEC /* EventView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E186944E2C1B349D0085EBEC /* EventView.swift */; };
+		E18694512C1B3F6C0085EBEC /* EventEditView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E18694502C1B3F6C0085EBEC /* EventEditView.swift */; };
+		E18694532C1B46C70085EBEC /* EventListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E18694522C1B46C70085EBEC /* EventListView.swift */; };
 		E19FF4C42C19D7AD00BA4D9D /* MotionDetector.swift in Sources */ = {isa = PBXBuildFile; fileRef = E19FF4C32C19D7AD00BA4D9D /* MotionDetector.swift */; };
 		E19FF4C72C19DA0300BA4D9D /* GaugeBackgroundView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E19FF4C62C19DA0300BA4D9D /* GaugeBackgroundView.swift */; };
 		E19FF4CA2C19DBFF00BA4D9D /* NeedleSeismometerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E19FF4C92C19DBFF00BA4D9D /* NeedleSeismometerView.swift */; };
@@ -55,6 +65,16 @@
 		E18694362C1AC6580085EBEC /* QRCodeScannerView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QRCodeScannerView.swift; sourceTree = "<group>"; };
 		E186943A2C1ACA450085EBEC /* QRCodeResultView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QRCodeResultView.swift; sourceTree = "<group>"; };
 		E186943E2C1AE2780085EBEC /* Task.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Task.swift; sourceTree = "<group>"; };
+		E18694402C1AE64C0085EBEC /* Symbols.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Symbols.swift; sourceTree = "<group>"; };
+		E18694422C1B06BA0085EBEC /* ColorOptions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ColorOptions.swift; sourceTree = "<group>"; };
+		E18694442C1B09B00085EBEC /* Event.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Event.swift; sourceTree = "<group>"; };
+		E18694462C1B15140085EBEC /* EventRowView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EventRowView.swift; sourceTree = "<group>"; };
+		E18694482C1B1D1A0085EBEC /* SFSymbolStyling.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SFSymbolStyling.swift; sourceTree = "<group>"; };
+		E186944A2C1B1FBA0085EBEC /* TaskRowView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TaskRowView.swift; sourceTree = "<group>"; };
+		E186944C2C1B2B8A0085EBEC /* SymbolPickerView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SymbolPickerView.swift; sourceTree = "<group>"; };
+		E186944E2C1B349D0085EBEC /* EventView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EventView.swift; sourceTree = "<group>"; };
+		E18694502C1B3F6C0085EBEC /* EventEditView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EventEditView.swift; sourceTree = "<group>"; };
+		E18694522C1B46C70085EBEC /* EventListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EventListView.swift; sourceTree = "<group>"; };
 		E19FF4C32C19D7AD00BA4D9D /* MotionDetector.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MotionDetector.swift; sourceTree = "<group>"; };
 		E19FF4C62C19DA0300BA4D9D /* GaugeBackgroundView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GaugeBackgroundView.swift; sourceTree = "<group>"; };
 		E19FF4C92C19DBFF00BA4D9D /* NeedleSeismometerView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NeedleSeismometerView.swift; sourceTree = "<group>"; };
@@ -106,6 +126,12 @@
 		E186943C2C1AE2610085EBEC /* Views */ = {
 			isa = PBXGroup;
 			children = (
+				E18694462C1B15140085EBEC /* EventRowView.swift */,
+				E186944A2C1B1FBA0085EBEC /* TaskRowView.swift */,
+				E186944E2C1B349D0085EBEC /* EventView.swift */,
+				E186944C2C1B2B8A0085EBEC /* SymbolPickerView.swift */,
+				E18694502C1B3F6C0085EBEC /* EventEditView.swift */,
+				E18694522C1B46C70085EBEC /* EventListView.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -114,6 +140,9 @@
 			isa = PBXGroup;
 			children = (
 				E186943E2C1AE2780085EBEC /* Task.swift */,
+				E18694402C1AE64C0085EBEC /* Symbols.swift */,
+				E18694422C1B06BA0085EBEC /* ColorOptions.swift */,
+				E18694442C1B09B00085EBEC /* Event.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -135,6 +164,7 @@
 			children = (
 				E186943D2C1AE2680085EBEC /* Models */,
 				E186943C2C1AE2610085EBEC /* Views */,
+				E18694482C1B1D1A0085EBEC /* SFSymbolStyling.swift */,
 			);
 			path = DDLPlanner;
 			sourceTree = "<group>";
@@ -292,19 +322,28 @@
 			files = (
 				E18694312C1AA7DC0085EBEC /* QRCodeGeneratorView.swift in Sources */,
 				E18694372C1AC6580085EBEC /* QRCodeScannerView.swift in Sources */,
+				E18694492C1B1D1A0085EBEC /* SFSymbolStyling.swift in Sources */,
+				E18694512C1B3F6C0085EBEC /* EventEditView.swift in Sources */,
 				E18694352C1ABFE90085EBEC /* QRCodePickerView.swift in Sources */,
 				E19FF4D92C1A1EAD00BA4D9D /* Friend.swift in Sources */,
 				E186943F2C1AE2780085EBEC /* Task.swift in Sources */,
+				E18694532C1B46C70085EBEC /* EventListView.swift in Sources */,
 				E19FF4C72C19DA0300BA4D9D /* GaugeBackgroundView.swift in Sources */,
+				E18694472C1B15140085EBEC /* EventRowView.swift in Sources */,
 				E19FF4E72C1A2A6900BA4D9D /* FriendDetailView.swift in Sources */,
+				E186944F2C1B349D0085EBEC /* EventView.swift in Sources */,
 				E18694332C1AAAD00085EBEC /* QRCodeSheetView.swift in Sources */,
+				E186944B2C1B1FBA0085EBEC /* TaskRowView.swift in Sources */,
+				E18694432C1B06BA0085EBEC /* ColorOptions.swift in Sources */,
 				E1A1DCEB2C19CEDC00F77968 /* DoubleExtension.swift in Sources */,
 				E1A1DCC22C19BF9B00F77968 /* ToolsView.swift in Sources */,
+				E186944D2C1B2B8A0085EBEC /* SymbolPickerView.swift in Sources */,
 				E19FF4CA2C19DBFF00BA4D9D /* NeedleSeismometerView.swift in Sources */,
 				E1A1DCBB2C19B28E00F77968 /* ContentView.swift in Sources */,
 				E1A1DCA92C1944D000F77968 /* LIFTApp.swift in Sources */,
 				E1A1DCBD2C19B5FB00F77968 /* AboutView.swift in Sources */,
 				E19FF4E42C1A22B900BA4D9D /* SampleData.swift in Sources */,
+				E18694412C1AE64C0085EBEC /* Symbols.swift in Sources */,
 				E186943B2C1ACA450085EBEC /* QRCodeResultView.swift in Sources */,
 				E1A1DCE82C19CE6500F77968 /* SeismometerPickerView.swift in Sources */,
 				E19FF4EB2C1A2FCC00BA4D9D /* FilteredFriendsListView.swift in Sources */,
@@ -312,6 +351,7 @@
 				E19FF4DE2C1A1F7100BA4D9D /* FriendsListView.swift in Sources */,
 				E19FF4D22C19F8A900BA4D9D /* LineGraphView.swift in Sources */,
 				E19FF4D52C19F95E00BA4D9D /* GraphSeismometerView.swift in Sources */,
+				E18694452C1B09B00085EBEC /* Event.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
