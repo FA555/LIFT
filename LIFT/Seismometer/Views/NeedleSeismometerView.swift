@@ -52,6 +52,7 @@ struct NeedleSeismometerView: View {
       Spacer()
       
       Text("Set the device on a flat surface to record vibrations.")
+        .font(.caption)
         .foregroundStyle(.secondary)
         .padding()
     }

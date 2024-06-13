@@ -8,11 +8,66 @@
 import SwiftUI
 
 struct QRCodeSheetView: View {
-    var body: some View {
-        Text(/*@START_MENU_TOKEN@*/"Hello, World!"/*@END_MENU_TOKEN@*/)
+  @State var qrCodeImage: UIImage?
+  @State private var showAlert = false
+  @Environment(\.dismiss) private var dismiss
+  
+  var body: some View {
+    NavigationStack {
+      VStack {
+        Spacer()
+        
+        if let qrCodeImage = qrCodeImage {
+          Image(uiImage: qrCodeImage)
+            .resizable()
+            .aspectRatio(contentMode: .fit)
+            .padding()
+        } else {
+          Text("No QR Code Generated")
+            .padding()
+        }
+        
+        Spacer()
+        
+        Text("If no QR code is shown, please check if the input text is too long and try again.")
+          .font(.caption)
+          .foregroundStyle(.secondary)
+      }
+      .navigationBarTitle("QR Code", displayMode: .inline)
+      .toolbar {
+        ToolbarItem(placement: .cancellationAction) {
+          Button("Cancel") {
+            dismiss()
+          }
+        }
+        
+        ToolbarItem(placement: .confirmationAction) {
+          Button("Save") {
+            saveQRCode()
+          }
+          .alert(isPresented: $showAlert) {
+            Alert(
+              title: Text("Saved"),
+              message: Text("The QR code has been saved to your photo library."),
+              dismissButton: .default(Text("OK"))
+            )
+          }
+        }
+      }
+      .padding()
     }
+  }
+  
+  func saveQRCode() {
+    guard let qrCodeImage = qrCodeImage else { return }
+    UIImageWriteToSavedPhotosAlbum(qrCodeImage, nil, nil, nil)
+    showAlert = true
+    DispatchQueue.main.asyncAfter(deadline: .now() + 2) {
+      dismiss()
+    }
+  }
 }
 
 #Preview {
-    QRCodeSheetView()
+  QRCodeSheetView(qrCodeImage: nil)
 }

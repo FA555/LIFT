@@ -8,11 +8,33 @@
 import SwiftUI
 
 struct QRCodeResultView: View {
-    var body: some View {
-        Text(/*@START_MENU_TOKEN@*/"Hello, World!"/*@END_MENU_TOKEN@*/)
+  var scannedCode: String
+  
+  var body: some View {
+    NavigationStack {
+      GeometryReader { geometry in
+        Text(scannedCode)
+          .frame(minWidth: geometry.size.width - 40, maxHeight: .infinity, alignment: .topLeading)
+          .padding(20)
+          .overlay(
+            RoundedRectangle(cornerRadius: 10)
+              .stroke(.tint)
+              .padding()
+          )
+          .navigationTitle("Scan Result")
+          .navigationBarTitleDisplayMode(.inline)
+          .toolbar {
+            ToolbarItem(placement: .confirmationAction) {
+              Button("Copy") {
+                UIPasteboard.general.string = scannedCode
+              }
+            }
+          }
+      }
     }
+  }
 }
 
 #Preview {
-    QRCodeResultView()
+  QRCodeResultView(scannedCode: "Sample QR Code Content")
 }

@@ -11,7 +11,7 @@ struct ToolsInnerView: View {
   var body: some View {
     List {
       NavigationLink {
-        ModePickerView()
+        SeismometerPickerView()
       } label: {
         HStack {
           Image(systemName: "metronome")
@@ -75,7 +75,7 @@ struct ToolsInnerView: View {
       
       // A tool for scanning and generating QR codes.
       NavigationLink {
-        Text("810893")
+        QRCodePickerView()
       } label: {
         HStack {
           Image(systemName: "qrcode")

@@ -58,8 +58,9 @@ struct GraphSeismometerView: View {
       Spacer()
 
       Text("Set the device on a flat surface to record vibrations.")
-        .padding()
         .foregroundStyle(.secondary)
+        .font(.caption)
+        .padding()
     }
     .onAppear {
       detector.start()

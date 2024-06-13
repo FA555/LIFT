@@ -2,9 +2,6 @@
   "sourceLanguage" : "en",
   "strings" : {
     "%@" : {
-
-    },
-    "0.1.0" : {
       "localizations" : {
         "zh" : {
           "stringUnit" : {
@@ -14,47 +11,145 @@
         }
       }
     },
-    "810893" : {
-
+    "0.1.0" : {
+      "localizations" : {
+        "zh" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "0.1.0"
+          }
+        }
+      }
     },
     "1919810" : {
-
+      "localizations" : {
+        "zh" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : ""
+          }
+        }
+      }
     },
     "A graph that shows the device’s vibration." : {
-
+      "localizations" : {
+        "zh" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "滚动显示设备震动的折线图。"
+          }
+        }
+      }
     },
     "A needle that responds to the device’s vibration." : {
-
+      "localizations" : {
+        "zh" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "实时响应设备震动的指针表盘。"
+          }
+        }
+      }
     },
     "About" : {
-
+      "localizations" : {
+        "zh" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "关于"
+          }
+        }
+      }
     },
     "Add Friend" : {
-
-    },
-    "Add Item" : {
-
+      "localizations" : {
+        "zh" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "新增朋友"
+          }
+        }
+      }
     },
     "Author" : {
-
+      "localizations" : {
+        "zh" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "作者"
+          }
+        }
+      }
     },
     "Birthday" : {
-
+      "localizations" : {
+        "zh" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "生日"
+          }
+        }
+      }
     },
     "Birthday Reminder" : {
-
+      "localizations" : {
+        "zh" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "生日提醒"
+          }
+        }
+      }
     },
     "Birthdays" : {
-
+      "localizations" : {
+        "zh" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "生日"
+          }
+        }
+      }
     },
     "Cancel" : {
-
+      "localizations" : {
+        "zh" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "取消"
+          }
+        }
+      }
+    },
+    "Copy" : {
+      "localizations" : {
+        "zh" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "复制"
+          }
+        }
+      }
     },
     "DDL Planner" : {
-
+      "localizations" : {
+        "zh" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : ""
+          }
+        }
+      }
     },
     "Done" : {
-
+      "localizations" : {
+        "zh" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "完成"
+          }
+        }
+      }
     },
     "fa_555" : {
       "localizations" : {
@@ -67,7 +162,44 @@
       }
     },
     "Friend" : {
-
+      "localizations" : {
+        "zh" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "朋友"
+          }
+        }
+      }
+    },
+    "Generate" : {
+      "localizations" : {
+        "zh" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "生成"
+          }
+        }
+      }
+    },
+    "Generate a QR code from the input text." : {
+      "localizations" : {
+        "zh" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "从输入的文本生成二维码。"
+          }
+        }
+      }
+    },
+    "Generator" : {
+      "localizations" : {
+        "zh" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "生成器"
+          }
+        }
+      }
     },
     "GitHub" : {
       "localizations" : {
@@ -80,13 +212,34 @@
       }
     },
     "Graph" : {
-
+      "localizations" : {
+        "zh" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "图表"
+          }
+        }
+      }
     },
     "Helps you plan your deadlines." : {
-
+      "localizations" : {
+        "zh" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "帮你记录和规划 DDL。"
+          }
+        }
+      }
     },
-    "Item at %@" : {
-
+    "If no QR code is shown, please check if the input text is too long and try again." : {
+      "localizations" : {
+        "zh" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "如果没有显示二维码，请检查输入文本是否过长并重试。"
+          }
+        }
+      }
     },
     "LIFT" : {
       "localizations" : {
@@ -99,70 +252,324 @@
       }
     },
     "Lightweight Integrated Featurized Toolbox" : {
-
+      "localizations" : {
+        "zh" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : ""
+          }
+        }
+      }
     },
     "Max" : {
-
+      "localizations" : {
+        "zh" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "最大值"
+          }
+        }
+      }
     },
     "Measures the device’s vibrations." : {
-
+      "localizations" : {
+        "zh" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "测量设备的震动。"
+          }
+        }
+      }
     },
     "Min" : {
-
+      "localizations" : {
+        "zh" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "最小值"
+          }
+        }
+      }
     },
     "Name" : {
-
+      "localizations" : {
+        "zh" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "名字"
+          }
+        }
+      }
     },
     "Needle" : {
-
+      "localizations" : {
+        "zh" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "指针"
+          }
+        }
+      }
     },
     "New Friend" : {
-
+      "localizations" : {
+        "zh" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "新朋友"
+          }
+        }
+      }
     },
     "No friends" : {
-
+      "localizations" : {
+        "zh" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "未找到朋友"
+          }
+        }
+      }
+    },
+    "No QR Code Generated" : {
+      "localizations" : {
+        "zh" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "未生成二维码"
+          }
+        }
+      }
+    },
+    "OK" : {
+      "localizations" : {
+        "zh" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "好"
+          }
+        }
+      }
     },
     "Organises all your friends' birthdays." : {
-
+      "localizations" : {
+        "zh" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "整理所有朋友的生日。"
+          }
+        }
+      }
     },
     "Pitch: %lf" : {
-
+      "localizations" : {
+        "zh" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "俯仰角：%lf"
+          }
+        }
+      }
+    },
+    "QR Code" : {
+      "localizations" : {
+        "zh" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "二维码"
+          }
+        }
+      }
+    },
+    "QR Code Generator" : {
+      "localizations" : {
+        "zh" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "二维码生成器"
+          }
+        }
+      }
+    },
+    "QR Code Scanner" : {
+      "localizations" : {
+        "zh" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "二维码扫描器"
+          }
+        }
+      }
     },
     "QR Code Tool" : {
-
+      "localizations" : {
+        "zh" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "二维码工具"
+          }
+        }
+      }
     },
     "Repository" : {
-
+      "localizations" : {
+        "zh" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "仓库"
+          }
+        }
+      }
     },
     "Roll: %lf" : {
-
+      "localizations" : {
+        "zh" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "横滚角：%lf"
+          }
+        }
+      }
+    },
+    "Save" : {
+      "localizations" : {
+        "zh" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "保存"
+          }
+        }
+      }
+    },
+    "Saved" : {
+      "localizations" : {
+        "zh" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "已保存"
+          }
+        }
+      }
+    },
+    "Scan a QR code to get the content." : {
+      "localizations" : {
+        "zh" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "扫描二维码获取内容。"
+          }
+        }
+      }
+    },
+    "Scan Result" : {
+      "localizations" : {
+        "zh" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "扫描结果"
+          }
+        }
+      }
+    },
+    "Scanner" : {
+      "localizations" : {
+        "zh" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "扫描器"
+          }
+        }
+      }
     },
     "Scans and generates QR codes." : {
-
+      "localizations" : {
+        "zh" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "扫描和生成二维码。"
+          }
+        }
+      }
     },
     "Seismometer" : {
-
+      "localizations" : {
+        "zh" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "地动仪"
+          }
+        }
+      }
     },
     "Select a tool to start." : {
-
-    },
-    "Select an item" : {
-
+      "localizations" : {
+        "zh" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "选择一个工具以开始。"
+          }
+        }
+      }
     },
     "Sensitivity" : {
-
+      "localizations" : {
+        "zh" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "灵敏度"
+          }
+        }
+      }
     },
     "Set the device on a flat surface to record vibrations." : {
-
+      "localizations" : {
+        "zh" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "将设备放在平面上以测量震动。"
+          }
+        }
+      }
+    },
+    "The QR code has been saved to your photo library." : {
+      "localizations" : {
+        "zh" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "此二维码已被保存到图库。"
+          }
+        }
+      }
     },
     "Toolbox" : {
-
+      "localizations" : {
+        "zh" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "工具箱"
+          }
+        }
+      }
     },
     "Version" : {
-
+      "localizations" : {
+        "zh" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "版本"
+          }
+        }
+      }
     },
     "Z Acceleration: %lf" : {
-
+      "localizations" : {
+        "zh" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Z轴加速度：%lf"
+          }
+        }
+      }
     }
   },
   "version" : "1.0"

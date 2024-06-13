@@ -24,20 +24,18 @@ struct QRCodeGeneratorView: View {
               .stroke(.tint)
               .padding()
           )
-        
-        Spacer()
       }
       .navigationTitle("QR Code Generator")
+      .navigationBarTitleDisplayMode(.inline)
       .toolbar {
-        ToolbarItem(placement: .navigationBarTrailing) {
+        ToolbarItem(placement: .confirmationAction) {
           Button("Generate") {
             generateQRCode()
           }
         }
       }
       .sheet(isPresented: $isSheetPresented) {
-//        QRCodeSheetView(qrCodeImage: qrCodeImage)
-        Text(inputText)
+        QRCodeSheetView(qrCodeImage: qrCodeImage)
       }
     }
   }
@@ -48,12 +46,12 @@ struct QRCodeGeneratorView: View {
       backgroundColor: UIColor.white.cgColor,
       foregroundColor: UIColor.black.cgColor
     ) {
-      qrCodeImage = UIImage(cgImage: cgImage)
-      isSheetPresented = true
+      self.qrCodeImage = UIImage(cgImage: cgImage)
     } else {
-      qrCodeImage = nil
-      isSheetPresented = false
+      self.qrCodeImage = UIImage(systemName: "xmark.circle.fill")
     }
+    
+    self.isSheetPresented = true
   }
 }
 

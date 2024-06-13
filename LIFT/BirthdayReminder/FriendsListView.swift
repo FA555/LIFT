@@ -47,7 +47,7 @@ struct FriendsListView: View {
         }
       } else {
         ContentUnavailableView {
-          Label("No friends", systemImage: "person.3.fill")
+          Label("No friends", systemImage: "person.3")
         }
         .background(Color(.systemGroupedBackground))
       }
