@@ -15,6 +15,8 @@ struct EventRowView: View {
       Image(systemName: event.symbol)
         .sfSymbolStyling()
         .foregroundStyle(event.color)
+        .frame(width: 35, alignment: .center)
+        .aspectRatio(contentMode: .fit)
       
       VStack(alignment: .leading, spacing: 5) {
         Text(event.title)

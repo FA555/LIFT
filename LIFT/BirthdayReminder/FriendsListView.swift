@@ -43,7 +43,9 @@ struct FriendsListView: View {
               }
             }
           }
-          .onDelete(perform: deleteFriends)
+          .onDelete {
+            deleteFriends(at: $0)
+          }
         }
       } else {
         ContentUnavailableView {
@@ -81,7 +83,6 @@ struct FriendsListView: View {
       DispatchQueue.main.async {
         newFriend = newFriend_
       }
-//      newFriend = newFriend_
     }
   }
   

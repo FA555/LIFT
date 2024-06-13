@@ -8,7 +8,7 @@
 import SwiftUI
 
 struct SymbolPickerView: View {
-  @Binding var event: Event
+  @Bindable var event: Event
   @State private var selectedColor: Color = ColorOptions.default.color
   @Environment(\.dismiss) private var dismiss
   @State private var symbolNames = Symbols.list
@@ -26,7 +26,7 @@ struct SymbolPickerView: View {
         } label: {
           Text("Done")
         }
-        .padding()
+        .padding([.top, .trailing])
       }
       
       Image(systemName: event.symbol)
@@ -78,6 +78,6 @@ struct SymbolPickerView: View {
 }
 
 #Preview {
-  SymbolPickerView(event: .constant(SampleData.shared.event))
+  SymbolPickerView(event: SampleData.shared.event)
     .modelContainer(SampleData.shared.container)
 }

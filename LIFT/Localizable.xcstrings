@@ -21,16 +21,6 @@
         }
       }
     },
-    "1919810" : {
-      "localizations" : {
-        "zh" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : ""
-          }
-        }
-      }
-    },
     "A graph that shows the device’s vibration." : {
       "localizations" : {
         "zh" : {
@@ -61,12 +51,42 @@
         }
       }
     },
+    "Add" : {
+      "localizations" : {
+        "zh" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "新增"
+          }
+        }
+      }
+    },
+    "Add Event" : {
+      "localizations" : {
+        "zh" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "新增事件"
+          }
+        }
+      }
+    },
     "Add Friend" : {
       "localizations" : {
         "zh" : {
           "stringUnit" : {
             "state" : "translated",
             "value" : "新增朋友"
+          }
+        }
+      }
+    },
+    "Add Task" : {
+      "localizations" : {
+        "zh" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "新增任务"
           }
         }
       }
@@ -131,12 +151,22 @@
         }
       }
     },
+    "Date" : {
+      "localizations" : {
+        "zh" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "日期"
+          }
+        }
+      }
+    },
     "DDL Planner" : {
       "localizations" : {
         "zh" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : ""
+            "value" : "行事历"
           }
         }
       }
@@ -147,6 +177,36 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "完成"
+          }
+        }
+      }
+    },
+    "Edit" : {
+      "localizations" : {
+        "zh" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "编辑"
+          }
+        }
+      }
+    },
+    "Event title" : {
+      "localizations" : {
+        "zh" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "事件名"
+          }
+        }
+      }
+    },
+    "Events" : {
+      "localizations" : {
+        "zh" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "事件"
           }
         }
       }
@@ -167,6 +227,17 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "朋友"
+          }
+        }
+      }
+    },
+    "Future" : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "zh" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "将来"
           }
         }
       }
@@ -226,7 +297,7 @@
         "zh" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "帮你记录和规划 DDL。"
+            "value" : "帮你记录事件与 DDL。"
           }
         }
       }
@@ -237,6 +308,28 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "如果没有显示二维码，请检查输入文本是否过长并重试。"
+          }
+        }
+      }
+    },
+    "In 7 Days" : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "zh" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "7天内"
+          }
+        }
+      }
+    },
+    "In 30 Days" : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "zh" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "30天内"
           }
         }
       }
@@ -346,7 +439,7 @@
         "zh" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "好"
+            "value" : "过去"
           }
         }
       }
@@ -357,6 +450,17 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "整理所有朋友的生日。"
+          }
+        }
+      }
+    },
+    "Past" : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "zh" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "过去"
           }
         }
       }
@@ -527,6 +631,36 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "将设备放在平面上以测量震动。"
+          }
+        }
+      }
+    },
+    "Task" : {
+      "localizations" : {
+        "zh" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "任务"
+          }
+        }
+      }
+    },
+    "Task description" : {
+      "localizations" : {
+        "zh" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "任务描述"
+          }
+        }
+      }
+    },
+    "Tasks" : {
+      "localizations" : {
+        "zh" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "任务"
           }
         }
       }

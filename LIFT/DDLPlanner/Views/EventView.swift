@@ -6,9 +6,10 @@
 //
 
 import SwiftUI
+import SwiftData
 
 struct EventView: View {
-  @Binding var event: Event
+  @Bindable var event: Event
   let isEditing: Bool
   @State private var isPickingSymbol = false
   
@@ -57,11 +58,22 @@ struct EventView: View {
       .listRowSeparator(.hidden)
       
       Section {
-        ForEach($event.tasks) { $task in
+        ForEach($event.tasks.sorted { $lhs, $rhs in
+          lhs.addTime < rhs.addTime
+        }) { $task in
           TaskRowView(task: $task, isEditing: isEditing)
         }
         .onDelete { indexSet in
-          event.tasks.remove(atOffsets: indexSet)
+          let sortedTasks = event.tasks.sorted { lhs, rhs in
+            lhs.addTime < rhs.addTime
+          }
+          var indexSetToBeRemoved: IndexSet = []
+          for index in indexSet {
+            indexSetToBeRemoved.insert(event.tasks.firstIndex {
+              $0.id == sortedTasks[index].id
+            }!)
+          }
+          event.tasks.remove(atOffsets: indexSetToBeRemoved)
         }
         
         Button {
@@ -82,17 +94,17 @@ struct EventView: View {
     .navigationTitle("Task")
     .navigationBarTitleDisplayMode(.inline)
     .sheet(isPresented: $isPickingSymbol) {
-      SymbolPickerView(event: $event)
+      SymbolPickerView(event: event)
     }
   }
 }
 
 #Preview {
-  EventView(event: .constant(SampleData.shared.event), isEditing: false)
+  EventView(event: SampleData.shared.event, isEditing: false)
     .modelContainer(SampleData.shared.container)
 }
 
 #Preview {
-  EventView(event: .constant(SampleData.shared.event), isEditing: true)
+  EventView(event: SampleData.shared.event, isEditing: true)
     .modelContainer(SampleData.shared.container)
 }

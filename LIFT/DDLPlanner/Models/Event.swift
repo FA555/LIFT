@@ -10,10 +10,10 @@ import SwiftData
 import SwiftUI
 
 enum EventCatetory: String, Identifiable, CaseIterable {
-  case past = "Past"
   case withinWeek = "In 7 Days"
   case withinMonth = "In 30 Days"
   case future = "Future"
+  case past = "Past"
   
   var id: String {
     rawValue
@@ -32,7 +32,7 @@ class Event: Identifiable, Hashable {
       tasks: [
         Task(text: "Pack clothes"),
         Task(text: "Check in online"),
-        Task(text: "Get to airport")
+        Task(text: "Get to airport"),
       ],
       date: Date.now.daysOut(-3)
     ),
@@ -41,7 +41,7 @@ class Event: Identifiable, Hashable {
       tasks: [
         Task(text: "Write README"),
         Task(text: "Push to GitHub"),
-        Task(text: "Submit to App Store")
+        Task(text: "Submit to App Store"),
       ],
       date: Date.now.daysOut(1)
     ),
@@ -49,7 +49,7 @@ class Event: Identifiable, Hashable {
       symbol: "arrow.down.left.circle.fill", color: .orange, title: "Charge iPhone",
       tasks: [
         Task(text: "Plug in charger"),
-        Task(text: "Wait for full charge")
+        Task(text: "Wait for full charge"),
       ],
       date: Date.now.daysOut(2)
     ),
@@ -57,7 +57,7 @@ class Event: Identifiable, Hashable {
       symbol: "bell.fill", color: .red, title: "Meeting with John",
       tasks: [
         Task(text: "Prepare presentation"),
-        Task(text: "Send meeting invite")
+        Task(text: "Send meeting invite"),
       ],
       date: Date.now.daysOut(5)
     ),
@@ -65,7 +65,7 @@ class Event: Identifiable, Hashable {
       symbol: "bicycle", color: .purple, title: "Bike to Work",
       tasks: [
         Task(text: "Check tire pressure"),
-        Task(text: "Pack lunch")
+        Task(text: "Pack lunch"),
       ],
       date: Date.now.daysOut(7)
     ),
@@ -73,7 +73,7 @@ class Event: Identifiable, Hashable {
       symbol: "bolt.fill", color: .green, title: "Fix Light Bulb",
       tasks: [
         Task(text: "Buy new light bulb"),
-        Task(text: "Replace light bulb")
+        Task(text: "Replace light bulb"),
       ],
       date: Date.now.daysOut(10)
     ),
@@ -81,23 +81,15 @@ class Event: Identifiable, Hashable {
       symbol: "bandage.fill", color: .yellow, title: "Get Vaccinated",
       tasks: [
         Task(text: "Make appointment"),
-        Task(text: "Bring ID")
+        Task(text: "Bring ID"),
       ],
       date: Date.now.daysOut(14)
-    ),
-    Event(
-      symbol: "banjo.fill", color: .red, title: "Learn Guitar",
-      tasks: [
-        Task(text: "Practice chords"),
-        Task(text: "Learn new song")
-      ],
-      date: Date.now.daysOut(21)
     ),
     Event(
       symbol: "balloon.fill", color: .indigo, title: "Birthday Party",
       tasks: [
         Task(text: "Buy gift"),
-        Task(text: "RSVP")
+        Task(text: "RSVP"),
       ],
       date: Date.now.daysOut(30)
     ),
@@ -105,7 +97,7 @@ class Event: Identifiable, Hashable {
       symbol: "book.fill", color: .green, title: "Read Book",
       tasks: [
         Task(text: "Buy book"),
-        Task(text: "Read 10 pages")
+        Task(text: "Read 10 pages"),
       ],
       date: Date.now.daysOut(45)
     ),
@@ -113,7 +105,7 @@ class Event: Identifiable, Hashable {
       symbol: "briefcase.fill", color: .yellow, title: "Job Interview",
       tasks: [
         Task(text: "Research company"),
-        Task(text: "Prepare questions")
+        Task(text: "Prepare questions"),
       ],
       date: Date.now.daysOut(60)
     ),
@@ -147,7 +139,7 @@ class Event: Identifiable, Hashable {
   }
   
   var remainingTaskCount: Int {
-    tasks.filter { $0.isCompleted }.count
+    tasks.filter { !$0.isCompleted }.count
   }
   
   var isCompleted: Bool {

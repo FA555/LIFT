@@ -11,6 +11,7 @@ import SwiftData
 @Model
 class Task: Identifiable, Hashable {
   var id = UUID()
+  var addTime = Date.now
   var text: String
   var isCompleted: Bool
   var isNew: Bool

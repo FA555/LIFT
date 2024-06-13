@@ -11,67 +11,75 @@ import SwiftData
 struct EventListView: View {
   @Environment(\.modelContext) private var context
   @Query(sort: \Event.date) private var events: [Event]
-  @State private var isAddNewEvent = false
-  @State private var newEvent = Event()
+  @State private var newEvent: Event?
   
   var body: some View {
-    List {
-//      ForEach(EventCatetory.allCases) { category in
-//        let eventsInCategory = events
-//          .filter {
-//            $0.category == category
-//          }
-//          .sorted {
-//            $0.date < $1.date
-//          }
-//        
-//        if !eventsInCategory.isEmpty {
-//          Section {
-//            ForEach(eventsInCategory) { event in
-//              NavigationLink {
-//                EventEditView(event: .constant(event))
-//              } label: {
-//                EventRowView(event: event)
-//              }
-//            }
-//          } header: {
-//            Text(category.name)
-//              .font(.callout)
-//              .foregroundStyle(.secondary)
-//              .bold()
-//          }
-//        }
-//      }
-      ForEach(events) { $event in
-        NavigationLink {
-          EventEditView(event: $event)
-        } label: {
-          EventRowView(event: event)
+    NavigationStack {
+      List {
+        ForEach(EventCatetory.allCases) { category in
+          let eventsInCategory = events
+            .filter {
+              $0.category == category
+            }
+            .sorted {
+              $0.date < $1.date
+            }
+          
+          if !eventsInCategory.isEmpty {
+            Section {
+              ForEach(eventsInCategory) { event in
+                NavigationLink {
+                  EventEditView(event: event)
+                } label: {
+                  EventRowView(event: event)
+                }
+              }
+            } header: {
+              let view = Text(NSLocalizedString(category.name, comment: ""))
+                .font(.callout)
+              
+              if category == .past {
+                view.foregroundStyle(.secondary)
+              } else {
+                view.bold()
+              }
+              
+              view
+            }
+          }
+        }
+        .onDelete {
+          deleteEvents(at: $0)
+        }
+      }
+      .navigationTitle("Events")
+      .navigationBarTitleDisplayMode(.inline)
+      .toolbar {
+        ToolbarItem {
+          Button {
+            let newEvent_ = Event()
+            context.insert(newEvent_)
+            DispatchQueue.main.async {
+              newEvent = newEvent_
+            }
+          } label: {
+            Label("Add Event", systemImage: "plus")
+          }
+        }
+      }
+      .sheet(item: $newEvent) { event in
+        NavigationStack {
+          EventEditView(event: event, isNew: true)
         }
       }
     }
   }
   
-//  func sortedEventsInCategory(category: EventCatetory) -> Binding<[Event]> {
-//    Binding<[Event]>(
-//      get: {
-//        self.events
-//          .filter {
-//            $0.category == category
-//          }
-//          .sorted {
-//            $0.date < $1.date
-//          }
-//      },
-//      set: { events in
-//        for event in events {
-//          if let index = self.events.firstIndex(where: { $0.id == event.id }) {
-//            self.events[index] = event
-//          }
-//        }
-//      }
-//    )
-//  }
+  private func deleteEvents(at offsets: IndexSet) {
+    for offset in offsets {
+      context.delete(events[offset])
+    }
+  }
 }
 
 #Preview {

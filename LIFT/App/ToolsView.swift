@@ -32,7 +32,7 @@ struct ToolsInnerView: View {
       .padding([.top, .bottom])
       
       NavigationLink {
-        Text("1919810")
+        EventListView()
       } label: {
         HStack {
           Image(systemName: "calendar")
