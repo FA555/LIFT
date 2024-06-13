@@ -64,7 +64,7 @@ struct GraphSeismometerView: View {
     }
     .onAppear {
       detector.start()
-      
+
       detector.onUpdate = {
         data.append(-detector.zAcceleration)
         if data.count > maxData {
