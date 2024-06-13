@@ -7,7 +7,7 @@
 
 import SwiftUI
 
-struct ModePickerView: View {
+struct SeismometerPickerView: View {
   var body: some View {
     NavigationStack {
       List {
@@ -57,5 +57,5 @@ struct ModePickerView: View {
 }
 
 #Preview {
-  ModePickerView()
+  SeismometerPickerView()
 }
