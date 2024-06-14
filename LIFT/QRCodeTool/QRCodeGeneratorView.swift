@@ -5,14 +5,14 @@
 //  Created by 法伍 on 2024/6/13.
 //
 
-import SwiftUI
 import EFQRCode
+import SwiftUI
 
 struct QRCodeGeneratorView: View {
   @State private var inputText: String = ""
   @State private var isSheetPresented = false
   @State private var qrCodeImage: UIImage?
-  
+
   var body: some View {
     NavigationStack {
       VStack {
@@ -39,7 +39,7 @@ struct QRCodeGeneratorView: View {
       }
     }
   }
-  
+
   func generateQRCode() {
     if let cgImage = EFQRCode.generate(
       for: inputText,
@@ -50,11 +50,10 @@ struct QRCodeGeneratorView: View {
     } else {
       self.qrCodeImage = UIImage(systemName: "xmark.circle.fill")
     }
-    
+
     self.isSheetPresented = true
   }
 }
-
 
 #Preview {
   QRCodeGeneratorView()

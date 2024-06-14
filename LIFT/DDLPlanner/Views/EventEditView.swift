@@ -5,17 +5,17 @@
 //  Created by 法伍 on 2024/6/13.
 //
 
-import SwiftUI
 import SwiftData
+import SwiftUI
 
 struct EventEditView: View {
   @Bindable var event: Event
   var isNew = false
   @Environment(\.dismiss) private var dismiss
   @Environment(\.modelContext) private var context
-  
+
   @State private var isEditing = false
-  
+
   var body: some View {
     NavigationStack {
       EventView(event: event, isEditing: isNew || isEditing)
@@ -23,11 +23,12 @@ struct EventEditView: View {
           ToolbarItem(placement: .cancellationAction) {
             if isNew {
               Button("Cancel") {
+                context.delete(event)
                 dismiss()
               }
             }
           }
-          
+
           ToolbarItem {
             Button {
               if isNew {

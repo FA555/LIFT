@@ -9,20 +9,20 @@ import SwiftUI
 
 struct NeedleSeismometerView: View {
   @ObservedObject private var detector = MotionDetector(updateInterval: 0.05)
-  
+
   let needleAnchor = UnitPoint(x: 0.5, y: 1)
   let amplification = 2.0
   var rotationAngle: Angle {
     Angle(radians: -detector.zAcceleration * amplification)
   }
-  
+
   var body: some View {
     VStack {
       Spacer()
-      
+
       ZStack(alignment: .bottom) {
         GaugeBackgroundView(width: 250)
-        
+
         Rectangle()
           .foregroundColor(Color.accentColor)
           .frame(width: 5, height: 150)
@@ -30,7 +30,7 @@ struct NeedleSeismometerView: View {
           .overlay {
             VStack {
               Spacer()
-              
+
               Circle()
                 .stroke(lineWidth: 3)
                 .fill()
@@ -41,16 +41,16 @@ struct NeedleSeismometerView: View {
             }
           }
       }
-      
+
       Spacer()
         .frame(height: 50)
-      
+
       Text("\(detector.zAcceleration.describeAsFixedLengthString())")
         .font(.system(.body, design: .monospaced))
         .fontWeight(.semibold)
-      
+
       Spacer()
-      
+
       Text("Set the device on a flat surface to record vibrations.")
         .font(.caption)
         .foregroundStyle(.secondary)

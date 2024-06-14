@@ -13,14 +13,14 @@ struct SymbolPickerView: View {
   @Environment(\.dismiss) private var dismiss
   @State private var symbolNames = Symbols.list
   @State private var searchInput = ""
-  
+
   let columns = Array(repeating: GridItem(.flexible()), count: 6)
-  
+
   var body: some View {
     VStack {
       HStack {
         Spacer()
-        
+
         Button {
           dismiss()
         } label: {
@@ -28,18 +28,18 @@ struct SymbolPickerView: View {
         }
         .padding([.top, .trailing])
       }
-      
+
       Image(systemName: event.symbol)
         .font(.title)
         .imageScale(.large)
         .foregroundStyle(selectedColor)
         .frame(minHeight: 50, alignment: .center)
         .padding()
-      
+
       HStack {
         ForEach(ColorOptions.allCases, id: \.self) { colorOption in
           let color = colorOption.color
-          
+
           Button {
             selectedColor = color
             event.colorRaw = colorOption.rawValue
@@ -51,9 +51,9 @@ struct SymbolPickerView: View {
       }
       .padding(.horizontal)
       .frame(height: 40)
-      
+
       Divider()
-      
+
       ScrollView {
         LazyVGrid(columns: columns) {
           ForEach(symbolNames, id: \.self) { symbolName in

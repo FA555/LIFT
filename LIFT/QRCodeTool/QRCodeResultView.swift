@@ -9,12 +9,17 @@ import SwiftUI
 
 struct QRCodeResultView: View {
   var scannedCode: String
-  
+  @State private var showAlert = false
+
   var body: some View {
     NavigationStack {
       GeometryReader { geometry in
         Text(scannedCode)
-          .frame(minWidth: geometry.size.width - 40, maxHeight: .infinity, alignment: .topLeading)
+          .frame(
+            minWidth: geometry.size.width - 40,
+            maxHeight: .infinity,
+            alignment: .topLeading
+          )
           .padding(20)
           .overlay(
             RoundedRectangle(cornerRadius: 10)
@@ -27,6 +32,12 @@ struct QRCodeResultView: View {
             ToolbarItem(placement: .confirmationAction) {
               Button("Copy") {
                 UIPasteboard.general.string = scannedCode
+                showAlert = true
+              }
+              .alert("Copied", isPresented: $showAlert) {
+                Button("OK") {
+                  showAlert = false
+                }
               }
             }
           }

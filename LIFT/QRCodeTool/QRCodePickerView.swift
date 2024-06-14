@@ -19,7 +19,7 @@ struct QRCodePickerView: View {
               .foregroundColor(Color.accentColor)
               .padding()
               .font(.title2)
-            
+
             VStack(alignment: .leading, spacing: 8) {
               Text("Generator")
                 .font(.headline)
@@ -30,7 +30,7 @@ struct QRCodePickerView: View {
           }
         }
         .padding([.top, .bottom])
-        
+
         NavigationLink {
           QRCodeScannerView()
         } label: {
@@ -39,7 +39,7 @@ struct QRCodePickerView: View {
               .foregroundColor(Color.accentColor)
               .padding()
               .font(.title2)
-            
+
             VStack(alignment: .leading, spacing: 8) {
               Text("Scanner")
                 .font(.headline)
@@ -58,5 +58,5 @@ struct QRCodePickerView: View {
 }
 
 #Preview {
-    QRCodePickerView()
+  QRCodePickerView()
 }

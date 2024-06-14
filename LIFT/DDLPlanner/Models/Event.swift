@@ -9,23 +9,28 @@ import Foundation
 import SwiftData
 import SwiftUI
 
-enum EventCatetory: String, Identifiable, CaseIterable {
+// Enum to categorize events based on their dates
+enum EventCategory: String, Identifiable, CaseIterable {
   case withinWeek = "In 7 Days"
   case withinMonth = "In 30 Days"
   case future = "Future"
   case past = "Past"
-  
+
+  // Conforming to Identifiable protocol
   var id: String {
     rawValue
   }
-  
+
+  // Name property for the category
   var name: String {
     rawValue
   }
 }
 
+// Model class representing an Event
 @Model
 class Event: Identifiable, Hashable {
+  // Sample data for testing and development
   static let sampleData: [Event] = [
     Event(
       symbol: "airplane", color: .indigo, title: "Travel to Paris",
@@ -46,7 +51,8 @@ class Event: Identifiable, Hashable {
       date: Date.now.daysOut(1)
     ),
     Event(
-      symbol: "arrow.down.left.circle.fill", color: .orange, title: "Charge iPhone",
+      symbol: "arrow.down.left.circle.fill", color: .orange,
+      title: "Charge iPhone",
       tasks: [
         Task(text: "Plug in charger"),
         Task(text: "Wait for full charge"),
@@ -110,18 +116,21 @@ class Event: Identifiable, Hashable {
       date: Date.now.daysOut(60)
     ),
   ]
-  
+
+  // Properties of the Event model
   var id = UUID()
   var symbol: String
   var colorRaw: String
   var title: String
   var tasks: [Task]
   var date: Date
-  
+
+  // Computed property to get the corresponding SwiftUI Color
   var color: Color {
     ColorOptions(rawValue: colorRaw).map { $0.color } ?? .accentColor
   }
-  
+
+  // Initializer to create an empty Event instance
   init() {
     self.symbol = Symbols.random
     self.colorRaw = ColorOptions.random.rawValue
@@ -129,57 +138,80 @@ class Event: Identifiable, Hashable {
     self.tasks = [Task(text: "")]
     self.date = Date()
   }
-  
-  init(symbol: String, color colorOption: ColorOptions, title: String, tasks: [Task], date: Date) {
+
+  // Initializer to create an Event instance with specified properties
+  init(
+    symbol: String, color colorOption: ColorOptions, title: String,
+    tasks: [Task], date: Date
+  ) {
     self.symbol = symbol
     self.colorRaw = colorOption.rawValue
     self.title = title
     self.tasks = tasks
     self.date = date
   }
-  
+
+  // Computed property to get the count of remaining tasks
   var remainingTaskCount: Int {
     tasks.filter { !$0.isCompleted }.count
   }
-  
+
+  // Computed property to check if all tasks are completed
   var isCompleted: Bool {
     tasks.allSatisfy { $0.isCompleted }
   }
-  
+
+  // Computed property to check if the event date is in the past
   var isPast: Bool {
     date < Date.now
   }
-  
+
+  // Computed property to check if the event is within a week
   var isWithinWeek: Bool {
     Date.now < date && date < Date.now.daysOut(7)
   }
-  
+
+  // Computed property to check if the event is within a month
   var isWithinMonth: Bool {
     Date.now.daysOut(7) <= date && date < Date.now.daysOut(30)
   }
-  
+
+  // Computed property to check if the event is in the future
   var isFuture: Bool {
     Date.now.daysOut(30) <= date
   }
-  
-  var category: EventCatetory {
+
+  // Computed property to get the event category
+  var category: EventCategory {
     if date < Date.now {
       return .past
     }
-    
+
     if date < Date.now.daysOut(7) {
       return .withinWeek
     }
-    
+
     if date < Date.now.daysOut(30) {
       return .withinMonth
     }
-    
+
     return .future
+  }
+
+  // Conformance to Equatable protocol
+  static func == (lhs: Event, rhs: Event) -> Bool {
+    lhs.id == rhs.id
+  }
+
+  // Conformance to Hashable protocol
+  func hash(into hasher: inout Hasher) {
+    hasher.combine(id)
   }
 }
 
+// Extension to add a utility method to Date
 extension Date {
+  // Method to get a date offset by a number of days
   func daysOut(_ days: Int) -> Date {
     Calendar.autoupdatingCurrent.date(byAdding: .day, value: days, to: self)!
   }

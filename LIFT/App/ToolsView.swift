@@ -18,11 +18,11 @@ struct ToolsInnerView: View {
             .foregroundStyle(.tint)
             .padding()
             .font(.title2)
-          
+
           VStack(alignment: .leading, spacing: 8) {
             Text("Seismometer")
               .font(.headline)
-            
+
             Text("Measures the device’s vibrations.")
               .font(.caption)
           }
@@ -30,7 +30,7 @@ struct ToolsInnerView: View {
         }
       }
       .padding([.top, .bottom])
-      
+
       NavigationLink {
         EventListView()
       } label: {
@@ -39,11 +39,11 @@ struct ToolsInnerView: View {
             .foregroundStyle(.tint)
             .padding()
             .font(.title2)
-          
+
           VStack(alignment: .leading, spacing: 8) {
-            Text("DDL Planner")
+            Text("Event Planner")
               .font(.headline)
-            
+
             Text("Helps you plan your deadlines.")
               .font(.caption)
           }
@@ -51,7 +51,7 @@ struct ToolsInnerView: View {
         }
       }
       .padding([.top, .bottom])
-      
+
       NavigationLink {
         FilteredFriendsListView()
       } label: {
@@ -60,11 +60,11 @@ struct ToolsInnerView: View {
             .foregroundStyle(.tint)
             .padding()
             .font(.title2)
-          
+
           VStack(alignment: .leading, spacing: 8) {
             Text("Birthday Reminder")
               .font(.headline)
-            
+
             Text("Organises all your friends' birthdays.")
               .font(.caption)
           }
@@ -72,7 +72,7 @@ struct ToolsInnerView: View {
         }
       }
       .padding([.top, .bottom])
-      
+
       // A tool for scanning and generating QR codes.
       NavigationLink {
         QRCodePickerView()
@@ -82,11 +82,11 @@ struct ToolsInnerView: View {
             .foregroundStyle(.tint)
             .padding()
             .font(.title2)
-          
+
           VStack(alignment: .leading, spacing: 8) {
             Text("QR Code Tool")
               .font(.headline)
-            
+
             Text("Scans and generates QR codes.")
               .font(.caption)
           }
@@ -107,6 +107,7 @@ struct ToolsView: View {
         ToolsInnerView()
       } detail: {
         Text("Select a tool to start.")
+          .foregroundStyle(.secondary)
       }
     } else {
       NavigationStack {

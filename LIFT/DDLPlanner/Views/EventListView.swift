@@ -5,54 +5,71 @@
 //  Created by 法伍 on 2024/6/13.
 //
 
-import SwiftUI
 import SwiftData
+import SwiftUI
 
 struct EventListView: View {
   @Environment(\.modelContext) private var context
   @Query(sort: \Event.date) private var events: [Event]
   @State private var newEvent: Event?
-  
+
   var body: some View {
     NavigationStack {
-      List {
-        ForEach(EventCatetory.allCases) { category in
-          let eventsInCategory = events
-            .filter {
-              $0.category == category
-            }
-            .sorted {
-              $0.date < $1.date
-            }
-          
-          if !eventsInCategory.isEmpty {
-            Section {
-              ForEach(eventsInCategory) { event in
-                NavigationLink {
-                  EventEditView(event: event)
-                } label: {
-                  EventRowView(event: event)
+      Group {
+        if !events.isEmpty {
+          List {
+            ForEach(EventCategory.allCases) { category in
+              let eventsInCategory =
+                events
+                .filter {
+                  $0.category == category
+                }
+                .sorted {
+                  $0.date < $1.date
+                }
+
+              if !eventsInCategory.isEmpty {
+                Section {
+                  ForEach(eventsInCategory) { event in
+                    NavigationLink {
+                      EventEditView(event: event)
+                    } label: {
+                      EventRowView(event: event)
+                    }
+                  }
+                } header: {
+                  let view = Text(NSLocalizedString(category.name, comment: ""))
+                    .font(.callout)
+
+                  if category == .past {
+                    view.foregroundStyle(.secondary)
+                  } else {
+                    view.bold()
+                  }
+
+                  view
                 }
               }
-            } header: {
-              let view = Text(NSLocalizedString(category.name, comment: ""))
-                .font(.callout)
-              
-              if category == .past {
-                view.foregroundStyle(.secondary)
-              } else {
-                view.bold()
-              }
-              
-              view
+            }
+            .onDelete {
+              deleteEvents(at: $0)
             }
           }
-        }
-        .onDelete {
-          deleteEvents(at: $0)
+        } else {
+          ContentUnavailableView {
+            Label("No events", systemImage: "calendar.badge.exclamationmark")
+
+            Spacer()
+              .frame(maxHeight: 20)
+
+            Text("Tap + to start.")
+              .font(.caption)
+              .foregroundStyle(.secondary)
+          }
+          .background(Color(.systemGroupedBackground))
         }
       }
-      .navigationTitle("Events")
+      .navigationTitle("Event Planner")
       .navigationBarTitleDisplayMode(.inline)
       .toolbar {
         ToolbarItem {
@@ -71,15 +88,20 @@ struct EventListView: View {
         NavigationStack {
           EventEditView(event: event, isNew: true)
         }
+        .interactiveDismissDisabled()
       }
     }
   }
-  
+
   private func deleteEvents(at offsets: IndexSet) {
     for offset in offsets {
       context.delete(events[offset])
     }
   }
+}
+
+#Preview("Empty list") {
+  EventListView()
 }
 
 #Preview {

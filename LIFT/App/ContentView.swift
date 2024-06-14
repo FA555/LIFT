@@ -15,7 +15,7 @@ struct ContentView: View {
           Image(systemName: "wrench.and.screwdriver.fill")
           Text("Toolbox")
         }
-      
+
       AboutView()
         .tabItem {
           Image(systemName: "info.circle")

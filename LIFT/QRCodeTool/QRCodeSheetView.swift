@@ -11,12 +11,12 @@ struct QRCodeSheetView: View {
   @State var qrCodeImage: UIImage?
   @State private var showAlert = false
   @Environment(\.dismiss) private var dismiss
-  
+
   var body: some View {
     NavigationStack {
       VStack {
         Spacer()
-        
+
         if let qrCodeImage = qrCodeImage {
           Image(uiImage: qrCodeImage)
             .resizable()
@@ -26,12 +26,14 @@ struct QRCodeSheetView: View {
           Text("No QR Code Generated")
             .padding()
         }
-        
+
         Spacer()
-        
-        Text("If no QR code is shown, please check if the input text is too long and try again.")
-          .font(.caption)
-          .foregroundStyle(.secondary)
+
+        Text(
+          "If no QR code is shown, please check if the input text is too long and try again."
+        )
+        .font(.caption)
+        .foregroundStyle(.secondary)
       }
       .navigationBarTitle("QR Code", displayMode: .inline)
       .toolbar {
@@ -40,31 +42,29 @@ struct QRCodeSheetView: View {
             dismiss()
           }
         }
-        
+
         ToolbarItem(placement: .confirmationAction) {
           Button("Save") {
             saveQRCode()
           }
-          .alert(isPresented: $showAlert) {
-            Alert(
-              title: Text("Saved"),
-              message: Text("The QR code has been saved to your photo library."),
-              dismissButton: .default(Text("OK"))
-            )
+          .alert("Saved", isPresented: $showAlert) {
+            Button("OK") {
+              dismiss()
+            }
           }
         }
       }
       .padding()
     }
   }
-  
+
   func saveQRCode() {
     guard let qrCodeImage = qrCodeImage else { return }
     UIImageWriteToSavedPhotosAlbum(qrCodeImage, nil, nil, nil)
     showAlert = true
-    DispatchQueue.main.asyncAfter(deadline: .now() + 2) {
-      dismiss()
-    }
+//    DispatchQueue.main.asyncAfter(deadline: .now()) {
+//      dismiss()
+//    }
   }
 }
 

@@ -19,7 +19,7 @@ struct SeismometerPickerView: View {
               .foregroundColor(Color.accentColor)
               .padding()
               .font(.title2)
-            
+
             VStack(alignment: .leading, spacing: 8) {
               Text("Needle")
                 .font(.headline)
@@ -30,16 +30,16 @@ struct SeismometerPickerView: View {
           }
         }
         .padding([.top, .bottom])
-        
+
         NavigationLink {
           GraphSeismometerView()
         } label: {
-          HStack() {
+          HStack {
             Image(systemName: "waveform")
               .foregroundColor(Color.accentColor)
               .padding()
               .font(.title2)
-            
+
             VStack(alignment: .leading, spacing: 8) {
               Text("Graph")
                 .font(.headline)

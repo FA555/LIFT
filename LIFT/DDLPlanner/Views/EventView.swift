@@ -5,14 +5,14 @@
 //  Created by 法伍 on 2024/6/13.
 //
 
-import SwiftUI
 import SwiftData
+import SwiftUI
 
 struct EventView: View {
   @Bindable var event: Event
   let isEditing: Bool
   @State private var isPickingSymbol = false
-  
+
   var body: some View {
     List {
       Section {
@@ -28,13 +28,13 @@ struct EventView: View {
             }
             .buttonStyle(.plain)
             .padding(.horizontal, 5)
-            
+
             TextField("Event title", text: $event.title)
               .font(.title2)
               .fontWeight(.semibold)
               .foregroundStyle(.gray)
           }
-          
+
           DatePicker("Date", selection: $event.date)
             .labelsHidden()
         } else {
@@ -43,12 +43,12 @@ struct EventView: View {
               .sfSymbolStyling()
               .foregroundStyle(event.color)
               .padding(.horizontal, 5)
-            
+
             Text(event.title)
               .font(.title2)
               .fontWeight(.semibold)
           }
-          
+
           HStack {
             Text(event.date, style: .date)
             Text(event.date, style: .time)
@@ -56,11 +56,13 @@ struct EventView: View {
         }
       }
       .listRowSeparator(.hidden)
-      
+
       Section {
-        ForEach($event.tasks.sorted { $lhs, $rhs in
-          lhs.addTime < rhs.addTime
-        }) { $task in
+        ForEach(
+          $event.tasks.sorted { $lhs, $rhs in
+            lhs.addTime < rhs.addTime
+          }
+        ) { $task in
           TaskRowView(task: $task, isEditing: isEditing)
         }
         .onDelete { indexSet in
@@ -69,13 +71,15 @@ struct EventView: View {
           }
           var indexSetToBeRemoved: IndexSet = []
           for index in indexSet {
-            indexSetToBeRemoved.insert(event.tasks.firstIndex {
-              $0.id == sortedTasks[index].id
-            }!)
+            indexSetToBeRemoved.insert(
+              event.tasks.firstIndex {
+                $0.id == sortedTasks[index].id
+              }!
+            )
           }
           event.tasks.remove(atOffsets: indexSetToBeRemoved)
         }
-        
+
         Button {
           event.tasks.append(Task(text: "", isNew: true))
         } label: {

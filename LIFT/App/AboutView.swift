@@ -28,7 +28,7 @@ struct AboutView: View {
 
           Spacer()
 
-          Text("0.1.0")
+          Text("1.0.2")
             .foregroundStyle(.secondary)
         }
 
@@ -42,13 +42,25 @@ struct AboutView: View {
         }
 
         HStack {
-          Text("Repository")
+          Text("Repository (Temporarily unreleased)")
 
           Spacer()
 
           // make it a link
           Link("GitHub", destination: URL(string: "https://github.com/FA555")!)
             .foregroundStyle(.link)
+        }
+
+        HStack {
+          Text("Personal website")
+
+          Spacer()
+
+          Link(
+            "blog.fa555.tech",
+            destination: URL(string: "https://blog.fa555.tech")!
+          )
+          .foregroundStyle(.link)
         }
       }
       .listStyle(.plain)

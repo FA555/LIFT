@@ -11,12 +11,12 @@
         }
       }
     },
-    "0.1.0" : {
+    "1.0.2" : {
       "localizations" : {
         "zh" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "0.1.0"
+            "value" : ""
           }
         }
       }
@@ -131,12 +131,32 @@
         }
       }
     },
+    "blog.fa555.tech" : {
+      "localizations" : {
+        "zh" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : ""
+          }
+        }
+      }
+    },
     "Cancel" : {
       "localizations" : {
         "zh" : {
           "stringUnit" : {
             "state" : "translated",
             "value" : "取消"
+          }
+        }
+      }
+    },
+    "Copied" : {
+      "localizations" : {
+        "zh" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "已复制"
           }
         }
       }
@@ -161,16 +181,6 @@
         }
       }
     },
-    "DDL Planner" : {
-      "localizations" : {
-        "zh" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "行事历"
-          }
-        }
-      }
-    },
     "Done" : {
       "localizations" : {
         "zh" : {
@@ -191,22 +201,22 @@
         }
       }
     },
+    "Event Planner" : {
+      "localizations" : {
+        "zh" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "行事历"
+          }
+        }
+      }
+    },
     "Event title" : {
       "localizations" : {
         "zh" : {
           "stringUnit" : {
             "state" : "translated",
             "value" : "事件名"
-          }
-        }
-      }
-    },
-    "Events" : {
-      "localizations" : {
-        "zh" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "事件"
           }
         }
       }
@@ -359,7 +369,7 @@
         "zh" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "最大值"
+            "value" : "高"
           }
         }
       }
@@ -379,7 +389,7 @@
         "zh" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "最小值"
+            "value" : "低"
           }
         }
       }
@@ -414,6 +424,16 @@
         }
       }
     },
+    "No events" : {
+      "localizations" : {
+        "zh" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "未找到事件"
+          }
+        }
+      }
+    },
     "No friends" : {
       "localizations" : {
         "zh" : {
@@ -439,7 +459,7 @@
         "zh" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "过去"
+            "value" : "好"
           }
         }
       }
@@ -461,6 +481,16 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "过去"
+          }
+        }
+      }
+    },
+    "Personal website" : {
+      "localizations" : {
+        "zh" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "个人主页"
           }
         }
       }
@@ -515,12 +545,12 @@
         }
       }
     },
-    "Repository" : {
+    "Repository (Temporarily unreleased)" : {
       "localizations" : {
         "zh" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "仓库"
+            "value" : "仓库（暂未公开）"
           }
         }
       }
@@ -635,6 +665,16 @@
         }
       }
     },
+    "Tap + to start." : {
+      "localizations" : {
+        "zh" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "轻点+以开始。"
+          }
+        }
+      }
+    },
     "Task" : {
       "localizations" : {
         "zh" : {
@@ -661,16 +701,6 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "任务"
-          }
-        }
-      }
-    },
-    "The QR code has been saved to your photo library." : {
-      "localizations" : {
-        "zh" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "此二维码已被保存到图库。"
           }
         }
       }

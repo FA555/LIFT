@@ -7,13 +7,17 @@
 
 import Foundation
 
+// Struct to manage a list of symbol names and provide random selections
 struct Symbols {
+  // Static property to get a random symbol from the list
   static var random = list.randomElement()!
-  
+
+  // Static method to get a list of random symbols with a specified size
   static func randomList(size count: Int) -> [String] {
     list.shuffled().prefix(count).map { $0 }
   }
-  
+
+  // Static array containing a list of symbol names
   static let list = [
     "house.fill",
     "ticket.fill",

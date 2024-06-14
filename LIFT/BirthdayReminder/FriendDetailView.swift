@@ -12,17 +12,19 @@ struct FriendDetailView: View {
   let isNew: Bool
   @Environment(\.dismiss) private var dismiss
   @Environment(\.modelContext) private var context
-  
+
   init(friend: Friend, isNew: Bool = false) {
     self.friend = friend
     self.isNew = isNew
   }
-  
+
   var body: some View {
     Form {
       TextField("Name", text: $friend.name)
-      
-      DatePicker("Birthday", selection: $friend.birthday, displayedComponents: [.date])
+
+      DatePicker(
+        "Birthday", selection: $friend.birthday, displayedComponents: [.date]
+      )
     }
     .toolbar {
       if isNew {
@@ -31,7 +33,7 @@ struct FriendDetailView: View {
             dismiss()
           }
         }
-        
+
         ToolbarItem(placement: .cancellationAction) {
           Button("Cancel") {
             context.delete(friend)

@@ -29,16 +29,20 @@ struct GraphSeismometerView: View {
     VStack {
       Spacer()
 
-      LineGraph(data: data, maxData: maxData, minValue: graphMinValue, maxValue: graphMaxValue)
-        .background(.thinMaterial)
-        .cornerRadius(15)
-        .padding()
-        .aspectRatio(1, contentMode: .fit)
-        .overlay(
-          RoundedRectangle(cornerRadius: 15)
-            .stroke(.black.opacity(0.25))
-            .padding()
-        )
+      LineGraph(
+        data: data, maxData: maxData,
+        minValue: graphMinValue,
+        maxValue: graphMaxValue
+      )
+      .background(.thinMaterial)
+      .cornerRadius(15)
+      .padding()
+      .aspectRatio(1, contentMode: .fit)
+      .overlay(
+        RoundedRectangle(cornerRadius: 15)
+          .stroke(.black.opacity(0.25))
+          .padding()
+      )
 
       Spacer()
         .frame(height: 25)

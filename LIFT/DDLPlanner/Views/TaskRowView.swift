@@ -11,17 +11,19 @@ struct TaskRowView: View {
   @Binding var task: Task
   var isEditing: Bool = false
   @FocusState private var isFocused: Bool
-  
+
   var body: some View {
     HStack {
       if isEditing || task.isNew {
         Button {
           task.isCompleted.toggle()
         } label: {
-          Image(systemName: task.isCompleted ? "checkmark.circle.fill" : "circle")
+          Image(
+            systemName: task.isCompleted ? "checkmark.circle.fill" : "circle"
+          )
         }
         .buttonStyle(.plain)
-        
+
         TextField("Task description", text: $task.text)
           .focused($isFocused)
           .onChange(of: isFocused) { _, newValue in
@@ -32,10 +34,10 @@ struct TaskRowView: View {
       } else {
         Image(systemName: task.isCompleted ? "checkmark.circle.fill" : "circle")
           .foregroundStyle(.secondary)
-        
+
         Text(task.text)
       }
-      
+
       Spacer()
     }
     .padding(.vertical, 10)

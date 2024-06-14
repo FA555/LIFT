@@ -24,7 +24,8 @@ struct GaugeBackgroundView: View {
   }
 
   var gaugeTickAngles: [Angle] {
-    let tickDegrees = (maxAngle.degrees - minAngle.degrees) / (Double(tickCount) - 1)
+    let tickDegrees =
+      (maxAngle.degrees - minAngle.degrees) / (Double(tickCount) - 1)
     var angles = [Angle]()
 
     for tick in 1..<tickCount - 1 {
@@ -46,7 +47,6 @@ struct GaugeBackgroundView: View {
         )
       }
       .fill()
-//      .foregroundColor(Color.accentColor.opacity(0.1))
       .foregroundStyle(.thinMaterial)
 
       ForEach(gaugeTickAngles) { angle in

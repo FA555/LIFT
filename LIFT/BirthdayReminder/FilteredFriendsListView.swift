@@ -9,7 +9,7 @@ import SwiftUI
 
 struct FilteredFriendsListView: View {
   @State private var searchText = ""
-  
+
   var body: some View {
     NavigationStack {
       FriendsListView(nameFilter: searchText)

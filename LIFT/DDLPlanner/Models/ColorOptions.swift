@@ -8,6 +8,7 @@
 import Foundation
 import SwiftUI
 
+// Enum representing various color options
 enum ColorOptions: String, CaseIterable {
   case primary = "primary"
   case gray = "gray"
@@ -19,13 +20,16 @@ enum ColorOptions: String, CaseIterable {
   case cyan = "cyan"
   case indigo = "indigo"
   case purple = "purple"
-  
+
+  // Default color option
   static let `default` = Self.primary
-  
+
+  // Random color option
   static var random: Self {
     return allCases.randomElement()!
   }
-  
+
+  // Computed property to get the corresponding SwiftUI Color
   var color: Color {
     switch self {
     case .primary:
